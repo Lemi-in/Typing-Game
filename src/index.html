@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Game</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes" />
+  <title>TypingGame</title>
+  <link rel="stylesheet" href="typing.css" />
 </head>
 <body>
-    <h1> The Game is not started yet</h1>
+  <main>
+    <h1>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 512" width="32" height="32" fill="currentColor">
+        <path d="..." />
+      </svg>
+      TypinGame
+    </h1>
+
+    <div id="buttons">
+      <span>Select Duration:</span>
+      <button class="duration-btn" data-time="15000">15s</button>
+      <button class="duration-btn" data-time="30000">30s</button>
+      <button class="duration-btn" data-time="60000">1 min</button>
+      <button class="duration-btn" data-time="120000">2 min</button>
+      <button id="newGameBtn">New Game</button>
+    </div>
+
+    <div id="info">Time Left: 30</div>
+
+    <div id="game" tabindex="0">
+      <div id="words"></div>
+      <div id="cursor"></div>
+      <div id="focus-error">Click here to focus</div>
+    </div>
+  </main>
+
+  <!-- ✅ FIX: Correct script path -->
+  <script src="../dist/server.js" type="module"></script>
 </body>
 </html>
